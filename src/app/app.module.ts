@@ -7,13 +7,17 @@ import { HeaderComponent } from './header/header.component';
 import { EntradaComponent } from './entrada/entrada.component';
 import {FormsModule} from '@angular/forms';
 import { ContadorComponent } from './contador/contador.component';
+import { ListaTareasComponent } from './lista-tareas/lista-tareas.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     EntradaComponent,
-    ContadorComponent
+    ContadorComponent,
+    ListaTareasComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

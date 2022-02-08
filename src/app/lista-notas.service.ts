@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ListaNotasService {
   notas = new Array();
+  filtrar_completadas : boolean = false;
+  filtrar_activas : boolean = false;
   constructor() { }
 }

@@ -1,0 +1,34 @@
+<div id ="tareas">
+    <ul>
+        <li class="tarea" *ngFor="let tarea of mostrarTareas(); index as i">
+            <div>
+                <label for="terminar">
+                    <input *ngIf="tarea.completado == false" type="checkbox" name="terminar" id="terminar" (click)="completarTarea(i)">
+                    <ng-template #elseBlock><input type="checkbox" checked name="terminar" id="terminar" (click)="descompletarTarea(i)"></ng-template>
+                    <p>{{tarea.nombre}}</p>    
+                </label>
+
+                <div id="boton_eliminar">
+                    <img (click)="eliminarTarea(i)" src="assets/img/eliminar.png">
+                </div>
+            </div>
+
+            <div>
+                <p>Prioridad:</p>
+
+                <button *ngIf="tarea.prioridad == 0; else elseBlock" disabled>&or; Baja</button>
+                <ng-template #elseBlock><button (click)="prioridadBaja(i)">&or; Baja</button></ng-template>
+                
+
+                <button *ngIf="tarea.prioridad == 1; else elseBlock" disabled>Media</button>
+                <ng-template #elseBlock><button (click)="prioridadMedia(i)">Media</button></ng-template>
+                
+
+                <button *ngIf="tarea.prioridad == 2; else elseBlock" disabled>&and; Alta</button>
+                <ng-template #elseBlock><button (click)="prioridadAlta(i)">&and; Alta</button></ng-template>
+                
+                <p>Creada el {{tarea.fecha}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
