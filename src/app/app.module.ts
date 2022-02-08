@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { EntradaComponent } from './entrada/entrada.component';
 import {FormsModule} from '@angular/forms';
+import { ContadorComponent } from './contador/contador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    EntradaComponent
+    EntradaComponent,
+    ContadorComponent
   ],
   imports: [
     BrowserModule,
